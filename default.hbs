@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head lang="en">
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Core CSS --}}
+    <link href="{{asset "css/hedgehog.min.css"}}" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/agate.css" rel="stylesheet">
+
+    {{!-- Icons --}}
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset "images/apple-touch-icon-144x144-precomposed.png"}}" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset "images/apple-touch-icon-114x114-precomposed.png"}}" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset "images/apple-touch-icon-72x72-precomposed.png"}}" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{asset "images/apple-touch-icon-57x57-precomposed.png"}}" />
+    <link rel="apple-touch-icon-precomposed" href="{{asset "images/apple-touch-icon-precomposed.png"}}" />
+    <link rel="apple-touch-icon" href="{{asset "images/apple-touch-icon.png"}}" />
+    <link rel="icon" type="image/x-icon" href="{{asset "images/favicon.ico"}}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset "images/favicon.ico"}}" />
+
+    <script src="//cdn.jsdelivr.net/npm/highlight.js@9.12.0/lib/highlight.min.js"></script>
+    <!-- Scripts declaration -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+    {{!-- Custom metadata --}}
+    <meta name="google-site-verification" content="nwC-NuCvDth85PuRxrw2yedZ_be4oUZB_03NLv9GeCI" />
+</head>
+
+<body class="{{body_class}}">
+    <div id="fb-root"></div>
+    <div class="wrapper">
+        <header class="container">
+            <!-- Responsive header -->
+            <div class="page-responsive-header">
+                <!-- Responsive navigation bar -->
+                <div class="navbar-header navbar-inverse">
+                    <a class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <!-- Current page title -->
+                    <h1 class="navbar-text"></h1>
+                </div>
+            </div>
+
+            <nav class="navbar" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand logo" href="/">
+                            <div class="hedgehog"></div>
+                            <div class="name">
+                                <small>Den of</small> hedgehog
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="nav navbar-nav row">
+                        <li class="col-xs-4">
+                            <a class="red" data-name="Blog" data-controller="blog" href="/#!/">
+                                <span>blog</span>
+                            </a>
+                        </li>
+                        <li class="col-xs-4">
+                            <a class="yellow" data-name="Projects" data-controller="projects" href="/#!/projects">
+                                <span>things i've done</span>
+                            </a>
+                        </li>
+                        <li class="col-xs-4">
+                            <a class="green" data-name="About Me" data-controller="about" href="/#!/about">
+                                <span>about me</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="content" class="content">
+            {{{body}}}
+        </div>
+        <footer>
+            <div class="container">
+                <div class="pull-right footer-links">
+                    <a target="_blank" href="https://www.facebook.com/dmitry.antonenko" title="Dmitry's Antonenko Facebook profile">
+                        <i class="fa fa-facebook-square fa-inverse"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/banguit">
+                        <i class="fa fa-twitter-square fa-inverse" title="Dmitry's Antonenko Twitter"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/dmitryantonenko" title="Dmitry's Antonenko LinkedIn profile">
+                        <i class="fa fa-linkedin-square fa-inverse"></i>
+                    </a>
+                    <a target="_blank" href="https://github.com/banguit" title="Dmitry's Antonenko GitHub profile">
+                        <i class="fa fa-github-square fa-inverse"></i>
+                    </a>
+                    <a target="_blank" href="http://feeds.feedburner.com/hedgehogcomua" title="Blog RSS">
+                        <i class="fa fa-rss-square fa-inverse"></i>
+                    </a>
+                </div>
+                <span class="copy">&copy; 2018 Dmytro Antonenko</span>
+            </div>
+        </footer>
+    </div>
+
+    {{ghost_foot}}
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-12373491-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+{
+  "name": "hedgehog",
+  "version": "0.0.2",
+  "author": {
+    "name": "Dmytro Antonenko",
+    "email": "dmitry.antonenko@hedgehog.com.ua",
+    "url": "http://hedgehog.com.ua"
+  },
+  "engines": {
+    "ghost": ">=1.2.0"
+  },
+  "license": "MIT",
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Responsive"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/banguit/hedgehog-ghost-theme.git"
+  },
+  "config": {
+    "posts_per_page": 5
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^3.0.0"
+  }
+}

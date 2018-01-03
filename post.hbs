@@ -1,0 +1,32 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<article id="post">
+    <header class="photo {{#if feature_image}}" style="background-image: url({{img_url feature_image}}){{else}}no-cover{{/if}}">
+        <h1 class="container">{{title}}</h1>
+    </header>
+    <main class="container content" role="main">
+        <article class="post">
+            <header class="post-header container">
+                <a class="back-link pull-left fa fa-angle-left" href="javascript:void(0)"><span> Back</span></a>
+                <section class="post-meta pull-right">
+                    <i class="fa fa-clock-o"></i>
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>on<span class="tags">{{tags autolink="false" prefix="" suffix="" }}</span>
+                </section>
+            </header>
+            <section class="post-content">
+                {{content}}
+            </section>
+            <section class="share">
+            </section>
+            <div id="disqus_thread"></div>
+        </article>
+    </main>
+</article>
+
+{{/post}}

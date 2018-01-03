@@ -1,0 +1,3 @@
+[submodule "vendors/hedgehog-bootstrap"]
+	path = vendors/hedgehog-bootstrap
+	url = https://banguit@github.com/banguit/hedgehog-bootstrap.git
