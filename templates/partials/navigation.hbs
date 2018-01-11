@@ -1,0 +1,11 @@
+<ul class="nav navbar-nav row">
+  <!-- Loop through the navigation items -->
+  {{#foreach navigation}}
+    <li class="col-xs-4">
+      <a class="nav-{{slug}}{{#if current}} nav-current{{/if}}" href="{{url absolute="true"}}">
+        <span>{{label}}</span>
+      </a>
+    </li>
+  {{/foreach}}
+  <!-- End the loop -->
+</ul>

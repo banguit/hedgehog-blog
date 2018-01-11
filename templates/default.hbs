@@ -42,10 +42,9 @@
 </head>
 
 <body class="{{body_class}}">
-    <div id="fb-root"></div>
     <div class="wrapper">
         <header class="container">
-            <!-- Responsive header -->
+            {{!-- Responsive header --}}
             <div class="page-responsive-header">
                 <!-- Responsive navigation bar -->
                 <div class="navbar-header navbar-inverse">
@@ -59,7 +58,6 @@
                     <h1 class="navbar-text"></h1>
                 </div>
             </div>
-
             <nav class="navbar" role="navigation">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -70,29 +68,11 @@
                             </div>
                         </a>
                     </div>
-                    <ul class="nav navbar-nav row">
-                        <li class="col-xs-4">
-                            <a class="red" data-name="Blog" data-controller="blog" href="/#!/">
-                                <span>blog</span>
-                            </a>
-                        </li>
-                        <li class="col-xs-4">
-                            <a class="yellow" data-name="Projects" data-controller="projects" href="/#!/projects">
-                                <span>things i've done</span>
-                            </a>
-                        </li>
-                        <li class="col-xs-4">
-                            <a class="green" data-name="About Me" data-controller="about" href="/#!/about">
-                                <span>about me</span>
-                            </a>
-                        </li>
-                    </ul>
+                    {{navigation}}
                 </div>
             </nav>
         </header>
-        <div id="content" class="content">
-            {{{body}}}
-        </div>
+        <div id="content" class="content">{{{body}}}</div>
         <footer>
             <div class="container">
                 <div class="pull-right footer-links">
@@ -116,18 +96,7 @@
             </div>
         </footer>
     </div>
-
     {{ghost_foot}}
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-12373491-4', 'auto');
-        ga('send', 'pageview');
-    </script>
 </body>
 
 </html>

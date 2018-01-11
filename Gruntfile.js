@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     exec: {
+      // Build hedgehog-bootstrap theme.
       build_hedgehog_bootstrap: {
         command: [
           'cd vendors/hedgehog-bootstrap',
@@ -8,33 +9,32 @@ module.exports = function(grunt) {
         ].join('&&')
       }
     },
+    // Clean dist folder.
     clean: {
       dist: ['dist/*'],
       ghost_theme: ['vendors/ghost/content/themes/hedgehog/*']
     },
     copy: {
+      // Copy all *.hbs templates to `dist` folder.
       hbs: {
         expand: true,
-        cwd: '.',
-        src: '*.hbs',
-        dest: 'dist'
-      },
-      hbs_partials: {
-        expand: true,
-        cwd: 'partials',
+        cwd: 'templates',
         src: '**',
-        dest: 'dist/partials/'
+        dest: 'dist/'
       },
+      // Copy hedgehog-bootstrap theme to `dist/assets` folder.
       hedgehog_bootstrap_dist: {
         expand: true,
         cwd: 'vendors/hedgehog-bootstrap/dist',
-        src: ['**'],
+        src: '**',
         dest: 'dist/assets'
       },
+      // Cpy package.json to `dist` folder.
       package_json: {
         src: 'package.json',
         dest: 'dist/package.json'
       },
+      // Copy complete theme to `ghost/content/themes/` folder.
       theme: {
         expand: true,
         cwd: 'dist',
@@ -42,6 +42,7 @@ module.exports = function(grunt) {
         dest: 'vendors/ghost/content/themes/hedgehog'
       }
     },
+    // Settings for `grunt watch` task.
     watch: {
       files: ['**.js', '**.hbs'],
       tasks: ['build']
@@ -61,7 +62,6 @@ module.exports = function(grunt) {
         'exec:build_hedgehog_bootstrap',
         'copy:hedgehog_bootstrap_dist',
         'copy:hbs',
-        'copy:hbs_partials',
         'copy:package_json',
         'copy:theme'
       ]
