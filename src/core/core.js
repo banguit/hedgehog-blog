@@ -6,9 +6,10 @@
 
 goog.provide('app.Core');
 
-goog.require('app.controllers.HomeController');
-goog.require('app.controllers.SettingsController');
+goog.require('app.controllers.BlogController');
 goog.require('app.core.Application');
+goog.require('hedgehog.filters.ComponentsInitializationActionFilter');
+goog.require('hedgehog.filters.ComponentsInitializationApplicationFilter');
 
 /**
  * The base application class. All application settings should specified here.
@@ -27,19 +28,19 @@ goog.inherits(app.Core, app.core.Application);
 app.Core.prototype.init = function() {
   // -- Register routes -- //
   // this.mapRoute(route:string, controller:!Function);
-  this.mapRoute('{!}{/}/settings{/:action}{/}',
-      app.controllers.SettingsController);
-  this.mapRoute('{!}{/}{/home{/:action}}{/}', app.controllers.HomeController);
+
   // Default route, specify other routes above this one
-  this.mapRoute('*', app.controllers.HomeController);
+  this.mapRoute('*', app.controllers.BlogController);
 
   // -- Register application filters -- //
   // this.addApplicationFilter(filter:!app.core.ApplicationFilter,
   //     opt_order?:number);
+  this.addApplicationFilter(new hedgehog.filters.ComponentsInitializationApplicationFilter());
 
   // -- Register action filters -- //
   // this.addActionFilter(filter:!app.core.ActionFilter,
   //     opt_route?:string|RegExp, opt_order?:number);
+  this.addActionFilter(new hedgehog.filters.ComponentsInitializationActionFilter(), null, 0);
 
   // Run application.
   this.run();

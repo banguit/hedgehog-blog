@@ -3,30 +3,29 @@
  * @author Dmytro Antonenko <dmitry.antonenko@pubwebkit.com>
  */
 
-goog.provide('app.controllers.HomeController');
+goog.provide('app.controllers.BlogController');
 
 goog.require('app.core.Controller');
 
 
 /**
- * Home controller.
+ * Blog controller.
  * @constructor
  * @extends {app.core.Controller}
  */
-app.controllers.HomeController = function() {
-  app.controllers.HomeController.base(this, 'constructor', 'HomeController');
+app.controllers.BlogController = function() {
+  app.controllers.BlogController.base(this, 'constructor', 'BlogController');
 };
-goog.inherits(app.controllers.HomeController, app.core.Controller);
+goog.inherits(app.controllers.BlogController, app.core.Controller);
 
 /**
  * index action.
  * @param {app.core.Request} request
  * @param {app.core.Response} response
  */
-app.controllers.HomeController.prototype.index = function(request, response) {
-  console.log('Hello Amigo!');
+app.controllers.BlogController.prototype.index = function(request, response) {
 };
 
 // Export actions.
-goog.exportProperty(app.controllers.HomeController.prototype, 'index',
-    app.controllers.HomeController.prototype.index);
+goog.exportProperty(app.controllers.BlogController.prototype, 'index',
+    app.controllers.BlogController.prototype.index);

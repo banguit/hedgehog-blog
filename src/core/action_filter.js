@@ -13,18 +13,6 @@ goog.provide('app.core.ActionFilter');
 app.core.ActionFilter = function() {};
 
 /**
- * Controller that will be processed by this filter.
- * @return {string|RegExp}
- */
-app.core.ActionFilter.prototype.getController = goog.abstractMethod;
-
-/**
- * Action that will be processed by this filter.
- * @return {string|RegExp}
- */
-app.core.ActionFilter.prototype.getAction = goog.abstractMethod;
-
-/**
  * Called when an unhandled exception occurs in the action.
  * @param {app.core.events.ActionExceptionEvent} event
  */

@@ -29,10 +29,16 @@
     "posts_per_page": 5
   },
   "devDependencies": {
+    "google-closure-compiler": "^20180101.0.0",
+    "google-closure-library": "^20171203.0.0",
+    "google-closure-templates": "^20150410.0.0",
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-exec": "^3.0.0"
+  },
+  "dependencies": {
+    "grunt-closure-soy": "^0.2.1"
   }
 }
