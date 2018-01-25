@@ -29,8 +29,8 @@ hedgehog.filters.ComponentsInitializationApplicationFilter.prototype.
   // Initialize UI components
   this.responsiveHeader_.decorate(
       goog.dom.getElementByClass('page-responsive-header'));
-  this.menu_.decorate(goog.dom.getElementByTagNameAndClass('nav', 'navbar',
-      document.querySelector('div.wrapper header.container')));
+  this.menu_.decorate(goog.dom.getElementByTagNameAndClass('ul', 'navbar-nav',
+      document.querySelector('header nav.navbar')));
 };
 
 /** @override */

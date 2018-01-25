@@ -1,7 +1,9 @@
 goog.provide('hedgehog.Menu');
 
+goog.require('goog.array');
 goog.require('goog.dom');
-//goog.require('goog.dom.classlist');
+goog.require('goog.dom.classlist');
+goog.require('goog.string');
 goog.require('goog.ui.Component');
 
 /**
@@ -23,26 +25,30 @@ hedgehog.Menu.prototype.createDom = function() {
  * Set active menu item by route.
  */
 hedgehog.Menu.prototype.setActiveMenuItem = function() {
-  var parent = this.getElement();
+  var navbar = this.getElement();
   var activeItems = goog.dom.getElementsByTagNameAndClass('a',
-      hedgehog.Menu.CSS_CLASSES.ACTIVE, parent);
+      hedgehog.Menu.CSS_CLASSES.ACTIVE, navbar);
 
+  // If no active menu items
   if(!activeItems.length) {
+      var menuItems =
+          goog.dom.getElementsByTagNameAndClass('a', null, navbar);
+      var currentLocation = window.location.href;
 
+      goog.array.forEach(menuItems, function (item, index) {
+          var className = goog.dom.classlist.get(item)[0];
+          if(goog.string.contains(currentLocation, '/' + className + '/')) {
+              goog.dom.classlist.add(item, hedgehog.Menu.CSS_CLASSES.ACTIVE);
+          }
+      });
+
+      activeItems = goog.dom.getElementsByTagNameAndClass('a',
+          hedgehog.Menu.CSS_CLASSES.ACTIVE, navbar);
+      if(!activeItems.length) {
+          goog.dom.classlist.add(menuItems[0],
+              hedgehog.Menu.CSS_CLASSES.ACTIVE);
+      }
   }
-
-  // var parent = this.getElement()[0]
-  //     , menuItem = document.querySelector('a[data-controller="' + controllerName
-  //     + '"]')
-  //     , name = goog.dom.dataset.get(menuItem, 'name');
-  //
-  // this.currentName_ = goog.isDefAndNotNull(name) ? name : '';
-  //
-  // goog.array.forEach(goog.dom.getElementsByTagNameAndClass('a', null, parent),
-  //     function (item, index) {
-  //       goog.dom.classlist.remove(item, hedgehog.Menu.CSS_CLASSES.ACTIVE);
-  //     });
-  // goog.dom.classlist.add(menuItem, hedgehog.Menu.CSS_CLASSES.ACTIVE);
 };
 
 /** @enum {string} */

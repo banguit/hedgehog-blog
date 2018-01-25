@@ -2,7 +2,7 @@
 // Please do not edit.
 goog.addDependency('../../../../node_modules/google-closure-templates/javascript/soyutils_usegoog.js', ['soy', 'soy.StringBuilder', 'soy.esc', 'soydata', 'soydata.SanitizedHtml', 'soydata.SanitizedHtmlAttribute', 'soydata.SanitizedJs', 'soydata.SanitizedJsStrChars', 'soydata.SanitizedUri', 'soydata.VERY_UNSAFE'], ['goog.array', 'goog.asserts', 'goog.dom.DomHelper', 'goog.format', 'goog.html.SafeHtml', 'goog.html.SafeStyle', 'goog.html.SafeUrl', 'goog.html.uncheckedconversions', 'goog.i18n.BidiFormatter', 'goog.i18n.bidi', 'goog.object', 'goog.soy', 'goog.soy.data.SanitizedContent', 'goog.soy.data.SanitizedContentKind', 'goog.string', 'goog.string.Const', 'goog.string.StringBuffer'], false);
 goog.addDependency('../../../../src/app.js', ['app'], ['app.Core'], false);
-goog.addDependency('../../../../src/components/menu.js', ['hedgehog.Menu'], ['goog.dom', 'goog.ui.Component'], false);
+goog.addDependency('../../../../src/components/menu.js', ['hedgehog.Menu'], ['goog.array', 'goog.dom', 'goog.dom.classlist', 'goog.string', 'goog.ui.Component'], false);
 goog.addDependency('../../../../src/components/responsiveheader.js', ['hedgehog.ResponsiveHeader'], ['goog.dom', 'goog.dom.classlist', 'goog.events', 'goog.ui.Component'], false);
 goog.addDependency('../../../../src/controllers/home_controller.js', ['app.controllers.BlogController'], ['app.core.Controller'], false);
 goog.addDependency('../../../../src/core/action_filter.js', ['app.core.ActionFilter'], [], false);

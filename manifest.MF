@@ -86,6 +86,7 @@ src/core/types/application_filter_item.js
 src/core/types/action_filter_item.js
 src/core/application.js
 src/filters/components_initialization_action_filter.js
+node_modules/google-closure-library/closure/goog/dom/classlist.js
 node_modules/google-closure-library/closure/goog/dom/vendor.js
 node_modules/google-closure-library/closure/goog/math/box.js
 node_modules/google-closure-library/closure/goog/math/irect.js
@@ -94,7 +95,6 @@ node_modules/google-closure-library/closure/goog/style/style.js
 node_modules/google-closure-library/closure/goog/ui/idgenerator.js
 node_modules/google-closure-library/closure/goog/ui/component.js
 src/components/menu.js
-node_modules/google-closure-library/closure/goog/dom/classlist.js
 src/components/responsiveheader.js
 src/filters/components_initialization_application_filter.js
 src/core/core.js
