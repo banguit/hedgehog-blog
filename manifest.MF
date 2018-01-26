@@ -1,6 +1,6 @@
 node_modules/google-closure-library/closure/goog/base.js
 src/core/controller.js
-src/controllers/home_controller.js
+src/controllers/blog_controller.js
 src/core/application_filter.js
 node_modules/google-closure-library/closure/goog/debug/error.js
 node_modules/google-closure-library/closure/goog/dom/nodetype.js
@@ -96,6 +96,7 @@ node_modules/google-closure-library/closure/goog/ui/idgenerator.js
 node_modules/google-closure-library/closure/goog/ui/component.js
 src/components/menu.js
 src/components/responsiveheader.js
+src/components/share.js
 src/filters/components_initialization_application_filter.js
 src/core/core.js
 src/app.js

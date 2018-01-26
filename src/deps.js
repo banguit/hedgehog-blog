@@ -4,7 +4,8 @@ goog.addDependency('../../../../node_modules/google-closure-templates/javascript
 goog.addDependency('../../../../src/app.js', ['app'], ['app.Core'], false);
 goog.addDependency('../../../../src/components/menu.js', ['hedgehog.Menu'], ['goog.array', 'goog.dom', 'goog.dom.classlist', 'goog.string', 'goog.ui.Component'], false);
 goog.addDependency('../../../../src/components/responsiveheader.js', ['hedgehog.ResponsiveHeader'], ['goog.dom', 'goog.dom.classlist', 'goog.events', 'goog.ui.Component'], false);
-goog.addDependency('../../../../src/controllers/home_controller.js', ['app.controllers.BlogController'], ['app.core.Controller'], false);
+goog.addDependency('../../../../src/components/share.js', ['hedgehog.Share'], ['goog.dom', 'goog.events', 'goog.ui.Component'], false);
+goog.addDependency('../../../../src/controllers/blog_controller.js', ['app.controllers.BlogController'], ['app.core.Controller'], false);
 goog.addDependency('../../../../src/core/action_filter.js', ['app.core.ActionFilter'], [], false);
 goog.addDependency('../../../../src/core/application.js', ['app.core.Application', 'app.core.Application.EventType'], ['app.core.ApplicationFilter', 'app.core.Request', 'app.core.Response', 'app.core.Router', 'app.core.events.ActionEvent', 'app.core.events.ActionExceptionEvent', 'app.core.types.ActionFilterContext', 'app.core.types.ActionFilterItem', 'app.core.types.ApplicationFilterItem', 'goog.Promise', 'goog.array', 'goog.dom', 'goog.events', 'goog.events.EventTarget', 'goog.string'], false);
 goog.addDependency('../../../../src/core/application_filter.js', ['app.core.ApplicationFilter'], [], false);
@@ -19,5 +20,5 @@ goog.addDependency('../../../../src/core/types/action_filter_context.js', ['app.
 goog.addDependency('../../../../src/core/types/action_filter_item.js', ['app.core.types.ActionFilterItem'], ['app.core.ActionFilter', 'app.core.types.ApplicationFilterItem'], false);
 goog.addDependency('../../../../src/core/types/application_filter_item.js', ['app.core.types.ApplicationFilterItem'], [], false);
 goog.addDependency('../../../../src/filters/components_initialization_action_filter.js', ['hedgehog.filters.ComponentsInitializationActionFilter'], ['app.core.ActionFilter'], false);
-goog.addDependency('../../../../src/filters/components_initialization_application_filter.js', ['hedgehog.filters.ComponentsInitializationApplicationFilter'], ['app.core.ApplicationFilter', 'goog.dom', 'hedgehog.Menu', 'hedgehog.ResponsiveHeader'], false);
+goog.addDependency('../../../../src/filters/components_initialization_application_filter.js', ['hedgehog.filters.ComponentsInitializationApplicationFilter'], ['app.core.ApplicationFilter', 'goog.dom', 'goog.events', 'goog.string', 'hedgehog.Menu', 'hedgehog.ResponsiveHeader', 'hedgehog.Share'], false);
 goog.addDependency('../../../../src/views/simple.soy.js', ['app.views'], ['soy', 'soydata'], false);

@@ -17,7 +17,6 @@ hedgehog.filters.ComponentsInitializationActionFilter.prototype.onActionExecutin
 
 /** @override */
 hedgehog.filters.ComponentsInitializationActionFilter.prototype.onActionExecuted = function (e) {
-
 };
 
 /** @override */

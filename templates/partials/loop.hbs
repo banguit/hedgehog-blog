@@ -1,6 +1,6 @@
 {{! This is the post loop - each post will be output using this markup }}
 <div id="blog">
-    <div class="photo">
+    <div class="photo" {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}}){{/if}}">
         <h1 class="container">Blog</h1>
     </div>
     <div class="container content">

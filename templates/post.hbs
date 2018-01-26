@@ -6,7 +6,7 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<article id="post">
+<article id="post" class="{{slug}} {{post_class}}">
     <header class="photo {{#if feature_image}}" style="background-image: url({{img_url feature_image}}){{else}}no-cover{{/if}}">
         <h1 class="container">{{title}}</h1>
     </header>
@@ -24,7 +24,20 @@
             </section>
             <section class="share">
             </section>
-            <div id="disqus_thread"></div>
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = '{{url absolute="true"}}';
+              this.page.identifier = 'ghost-{{comment_id}}';
+              this.page.title = '{{title}}';
+            };
+            (function() {
+              var d = document, s = d.createElement('script');
+              s.src = 'https://hedgehogcomua.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
         </article>
     </main>
 </article>
