@@ -15,9 +15,11 @@
             </header>
             <section class="post-content">
                 {{#if feature_image}}
+                <div class="post-card">
                   <a class="post-card-image-link" href="{{url}}">
                     <div class="post-card-image" style="background-image: url({{feature_image}})"></div>
                   </a>
+                </div>
                 {{/if}}
                 {{content words="100"}}
             </section>
