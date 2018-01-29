@@ -57,6 +57,9 @@ hedgehog.filters.ComponentsInitializationApplicationFilter.prototype.onApplicati
 
   // Initialize post back link.
   this.fixPostBackLink_();
+
+  // Attaches highlighting to the page load event.
+  window['hljs']['initHighlightingOnLoad']();
 };
 
 /**
