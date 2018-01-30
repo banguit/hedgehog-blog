@@ -1,0 +1,43 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! This is the post loop for specific tag }}
+<div id="tag">
+  {{#tag}}
+  <div class="photo {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
+    <h1 class="container">{{name}}</h1>
+    {{#if description}}
+      <p class="container">{{description}}</p>
+    {{else}}
+      <p class="container">A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}</p>
+    {{/if}}
+  </div>
+  {{/tag}}
+  <div class="container content">
+    {{#foreach posts}}
+      <article class="post">
+        <header class="post-header">
+          <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
+          <section class="post-meta">
+            <i class="fa fa-clock-o"></i>
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>on<span class="tags">{{tags autolink="true" prefix="" suffix="" }}</span>
+          </section>
+        </header>
+        <section class="post-content">
+          {{#if feature_image}}
+            <div class="post-card">
+              <a class="post-card-image-link" href="{{url}}">
+                <div class="post-card-image" style="background-image: url({{feature_image}})"></div>
+              </a>
+            </div>
+          {{/if}}
+          {{content words="100"}}
+        </section>
+        <a type="button" href="{{url}}" class="btn btn-default btn-sm read-more">Read more <i class="fa fa-angle-double-right"></i></a>
+      </article>
+    {{/foreach}}
+
+    {{! Previous/next page links - displayed on every page }}
+    {{pagination}}
+  </div>
+</div>
